@@ -1,5 +1,69 @@
 @import url(variables.css);
+
 body{
-    background-color: var(--color-primary);
+    margin: 0;
+    padding: 0;
     font-family: var(--font-primary);
+    background-color: var(--color-primary);
+}
+
+nav {
+    color: #fff;
+    z-index: 99;
+    position: relative;
+}
+
+nav a, header a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .container{
+    max-width: 1150 px;
+    padding: 1em 2em;
+    margin: auto;
+}
+
+nav .container > div {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+}
+
+nav .menu,
+nav form,
+.footer,
+.footer .watch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 0.5em,
+}
+
+nav ul a{
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+nav form{
+    margin-right: 2em;
+}
+
+nav form input{
+    background: transparent;
+    color: #fff;
+    width: 12em;
+    border: none;
+    outline: none;
+    /*min3:30*/
 }
