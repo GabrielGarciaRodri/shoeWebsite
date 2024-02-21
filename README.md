@@ -37,3 +37,55 @@ El padding en CSS es una propiedad o relleno que se crea alrededor del contenido
 margin:
 Resumen. La propiedad CSS margin establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen: margin-top (en-US), margin-right , margin-bottom y margin-left (en-US). También se permiten valores negativos.
 
+
+@media screen and (max-width:1250) {
+    nav{
+        margin-bottom: 2em;
+    }
+
+    .body {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    header::before {
+        display: none;
+    }
+
+    header{
+        height: initial;
+    }
+
+    .body > div:nth-child(2) {
+        justify-content: center;
+        margin: 3em 0;
+    }
+    .body img{
+        transform: none;
+    }
+
+    .body p{
+        margin: 2em auto 3em auto;
+    }
+}
+
+
+Este código CSS es un ejemplo de un bloque @media query. Estas queries se utilizan para aplicar estilos CSS específicos cuando se cumplen ciertas condiciones, como el tamaño de la pantalla del dispositivo.
+
+En este caso particular, el bloque @media screen and (max-width:1250px) se aplica cuando el ancho de la pantalla es de 1250 píxeles o menos. Veamos qué hace cada parte del código dentro de este bloque:
+
+nav { margin-bottom: 2em; }: Esto establece un margen inferior de 2em para todos los elementos <nav> cuando el ancho de la pantalla es de 1250 píxeles o menos.
+
+.body { grid-template-columns: 1fr; text-align: center; }: Para cualquier elemento con la clase .body, cambia la estructura de las columnas del grid a una sola columna (1fr) y ajusta el texto al centro.
+
+header::before { display: none; }: Oculta cualquier contenido antes del elemento <header>. Esto podría ser usado para ocultar un pseudo-elemento específico.
+
+header { height: initial; }: Establece la altura del elemento <header> a su valor inicial. Esto anula cualquier altura específica que se haya establecido anteriormente.
+
+.body > div:nth-child(2) { justify-content: center; margin: 3em 0; }: Para el segundo hijo directo de cualquier elemento con la clase .body, centra su contenido horizontalmente y aplica un margen de 3em arriba y abajo.
+
+.body img { transform: none; }: Para cualquier imagen dentro de un elemento con la clase .body, elimina cualquier transformación que pueda haber sido aplicada previamente.
+
+.body p { margin: 2em auto 3em auto; }: Para cualquier párrafo dentro de un elemento con la clase .body, aplica un margen de 2em arriba y abajo, y 3em a la izquierda y derecha.
+
+En resumen, este bloque de código CSS dentro de @media screen and (max-width:1250px) está diseñado para ajustar el diseño y estilo de ciertos elementos HTML cuando la pantalla es de 1250 píxeles o menos de ancho. Esto se hace para mejorar la experiencia de visualización en dispositivos con pantallas más pequeñas, como tablets o teléfonos móviles, haciendo que la disposición de los elementos y el espacio en pantalla sea más apropiado para estas dimensiones.
